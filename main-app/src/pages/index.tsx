@@ -1,16 +1,14 @@
-import React, { Suspense, lazy } from "react";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import dynamic from "next/dynamic";
 
-const CardContainer = lazy(() => import("list-app/CardContainer"));
+const CardContainer = dynamic(() => import("list-app/CardContainer"));
 
 export default function Home() {
   return (
     <>
       <Header />
-      <Suspense fallback={<div>Loading CardContainer...</div>}>
-        <CardContainer />
-      </Suspense>
+      <CardContainer />
       <Footer />
     </>
   );
