@@ -1,13 +1,16 @@
+import React, { Suspense, lazy } from "react";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+
+const CardContainer = lazy(() => import("list-app/CardContainer"));
 
 export default function Home() {
   return (
     <>
       <Header />
-      <main className="min-h-[75vh] h-full">
-        <h1>Main content goes here</h1>
-      </main>
+      <Suspense fallback={<div>Loading CardContainer...</div>}>
+        <CardContainer />
+      </Suspense>
       <Footer />
     </>
   );
