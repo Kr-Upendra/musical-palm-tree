@@ -54,7 +54,7 @@ In this example, `list-app` exposes the `CardContainer` component, and `main-app
 Clone the repository to your local machine:
 
 ```bash
-git clone https://github.com/your-repo/micro-frontend-nextjs-mf.git
+git clone https://github.com/Kr-Upendra/musical-palm-tree.git
 cd micro-frontend-nextjs-mf
 ```
 
